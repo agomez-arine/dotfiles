@@ -25,35 +25,50 @@ cd ~/dotfiles
 
 Prefix: `Ctrl+Space`
 
-| Keys | Action |
-|------|--------|
-| `Ctrl+Space r` | Reload config |
-| `Ctrl+Space c` | New window |
-| `Ctrl+Space \|` | Split vertical (side by side) |
-| `Ctrl+Space -` | Split horizontal (top/bottom) |
-| `Ctrl+Space $` | Rename session |
-| `Ctrl+Space ,` | Rename window |
-| `Ctrl+Space d` | Detach |
-| `Ctrl+Space n` | Next window |
-| `Ctrl+Space p` | Previous window |
-| `Ctrl+Space [0-9]` | Jump to window # |
+- Reload config
+  - `Ctrl+Space r`
+- New window
+  - `Ctrl+Space c`
+- Split vertical (side by side)
+  - `Ctrl+Space |`
+- Split horizontal (top/bottom)
+  - `Ctrl+Space -`
+- Close pane
+  - `Ctrl+Space x`
+- Cycle pane layouts
+  - `Ctrl+Space Space`
+- Rename session
+  - `Ctrl+Space $`
+- Rename window
+  - `Ctrl+Space ,`
+- Detach
+  - `Ctrl+Space d`
+- Next window
+  - `Ctrl+Space n`
+- Previous window
+  - `Ctrl+Space p`
+- Jump to window #
+  - `Ctrl+Space [0-9]`
 
 **Pane Navigation (no prefix needed):**
 
-| Keys | Action |
-|------|--------|
-| `Ctrl+h` | Move left |
-| `Ctrl+j` | Move down |
-| `Ctrl+k` | Move up |
-| `Ctrl+l` | Move right |
+- Move left
+  - `Ctrl+h`
+- Move down
+  - `Ctrl+j`
+- Move up
+  - `Ctrl+k`
+- Move right
+  - `Ctrl+l`
 
 **Copy Mode:**
 
-| Keys | Action |
-|------|--------|
-| `Ctrl+Space [` | Enter copy mode |
-| `v` | Start selection (in copy mode) |
-| `y` | Copy to clipboard (in copy mode) |
+- Enter copy mode
+  - `Ctrl+Space [`
+- Start selection (in copy mode)
+  - `v`
+- Copy to clipboard (in copy mode)
+  - `y`
 
 **Session Management:**
 
@@ -70,56 +85,122 @@ tmux kill-session -t name
 
 Leader: `Space`
 
+**Basics:**
+
+- Save
+  - `Ctrl+s` or `:w`
+- Close window/quit
+  - `:q`
+- Close buffer
+  - `:bd`
+- Force quit (discard changes)
+  - `:q!`
+- Save and quit
+  - `:wq`
+
+**Movement:**
+
+- End of line
+  - `$`
+- Beginning of line
+  - `0`
+- Search in file
+  - `/pattern`
+- Next/prev search result
+  - `n` / `N`
+
+**Selection & Copy:**
+
+- Visual mode (character)
+  - `v`
+- Visual mode (line)
+  - `V`
+- Visual mode (block)
+  - `Ctrl+v`
+- Yank (copy)
+  - `y`
+- Scroll down/up (half page)
+  - `Ctrl+d` / `Ctrl+u`
+
 **Harpoon (quick file marks):**
 
-| Keys | Action |
-|------|--------|
-| `<leader>ha` | Add file to harpoon |
-| `<leader>hh` | Open harpoon menu |
-| `<leader>1` | Jump to harpoon file 1 |
-| `<leader>2` | Jump to harpoon file 2 |
-| `<leader>3` | Jump to harpoon file 3 |
-| `<leader>4` | Jump to harpoon file 4 |
+- Add file to harpoon
+  - `<leader>ha`
+- Open harpoon menu
+  - `<leader>hh`
+- Jump to harpoon file 1
+  - `<leader>1`
+- Jump to harpoon file 2
+  - `<leader>2`
+- Jump to harpoon file 3
+  - `<leader>3`
+- Jump to harpoon file 4
+  - `<leader>4`
 
 **Git:**
 
-| Keys | Action |
-|------|--------|
-| `<leader>gg` | Open LazyGit |
-| `<leader>gd` | Diffview (all changes) |
-| `<leader>gh` | Diffview file history |
+- Open LazyGit
+  - `<leader>gg`
+- Exit LazyGit
+  - `q`
+- Diffview (all changes)
+  - `<leader>gd`
+- Diffview file history
+  - `<leader>gh`
 
 **Tools:**
 
-| Keys | Action |
-|------|--------|
-| `<leader>U` | Toggle Undotree |
-| `<leader>du` | Toggle DAP UI |
-| `<leader>de` | DAP eval (normal/visual) |
+- Toggle Undotree
+  - `<leader>U`
+- Toggle DAP UI
+  - `<leader>du`
+- DAP eval (normal/visual)
+  - `<leader>de`
+
+**Python:**
+
+- Select virtual environment
+  - `<leader>cv` or `:VenvSelect`
 
 **Navigation (tmux-aware):**
 
-| Keys | Action |
-|------|--------|
-| `Ctrl+h/j/k/l` | Move between splits/tmux panes |
+- Move between splits/tmux panes
+  - `Ctrl+h/j/k/l`
 
 **LazyVim Essentials:**
 
-| Keys | Action |
-|------|--------|
-| `<leader><leader>` | Find files |
-| `<leader>/` | Live grep |
-| `<leader>e` | File explorer (neo-tree) |
-| `<leader>bb` | Switch buffer |
-| `<leader>bd` | Delete buffer |
-| `<leader>cf` | Format file |
-| `<leader>cr` | Rename symbol |
-| `<leader>ca` | Code action |
-| `gd` | Go to definition |
-| `gr` | Go to references |
-| `K` | Hover documentation |
-| `<leader>xx` | Trouble diagnostics |
-| `]d` / `[d` | Next/prev diagnostic |
+- Find files
+  - `<leader><leader>`
+- Live grep
+  - `<leader>/`
+- File explorer (neo-tree)
+  - `<leader>e`
+- Buffer picker (list open files)
+  - `<leader>,`
+- Switch to last buffer
+  - `<leader>bb`
+- Next/prev buffer
+  - `]b` / `[b`
+- Delete buffer
+  - `<leader>bd`
+- Format file
+  - `<leader>cf`
+- Toggle format-on-save
+  - `<leader>uf`
+- Rename symbol
+  - `<leader>cr`
+- Code action
+  - `<leader>ca`
+- Go to definition
+  - `gd`
+- Go to references
+  - `gr`
+- Hover documentation
+  - `K`
+- Trouble diagnostics
+  - `<leader>xx`
+- Next/prev diagnostic
+  - `]d` / `[d`
 
 ---
 

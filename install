@@ -15,3 +15,6 @@ ln -s $DOTFILES/ghostty $HOME/.config/ghostty
 
 # starship
 ln -sf $DOTFILES/starship/starship.toml $HOME/.config/starship.toml
+
+# zsh
+ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
