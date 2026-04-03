@@ -104,10 +104,6 @@ Leader: `Space`
   - `$`
 - Beginning of line
   - `0`
-- Search in file
-  - `/pattern`
-- Next/prev search result
-  - `n` / `N`
 
 **Selection & Copy:**
 
@@ -206,4 +202,4 @@ Leader: `Space`
 
 ## License
 
-MIT License - see [LICENSE](LICENSE)
+MIT License
