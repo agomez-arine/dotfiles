@@ -37,6 +37,8 @@ Prefix: `Ctrl+Space`
   - `Ctrl+Space x`
 - Cycle pane layouts
   - `Ctrl+Space Space`
+- Swap pane position
+  - `Ctrl+Space {` / `Ctrl+Space }`
 - Rename session
   - `Ctrl+Space $`
 - Rename window
@@ -115,6 +117,12 @@ Leader: `Space`
   - `Ctrl+v`
 - Yank (copy)
   - `y`
+- Yank (copy) line
+  - `yy`
+- Cut line
+  - `dd`
+- Paste
+  - `p`
 - Scroll down/up (half page)
   - `Ctrl+d` / `Ctrl+u`
 
@@ -197,6 +205,12 @@ Leader: `Space`
   - `<leader>xx`
 - Next/prev diagnostic
   - `]d` / `[d`
+
+---
+
+## Tips
+
+- **Remap Caps Lock to Escape** — In macOS: System Settings → Keyboard → Keyboard Shortcuts → Modifier Keys → set Caps Lock to Escape. Makes hitting Escape in Vim much easier.
 
 ---
 
