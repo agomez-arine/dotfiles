@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+# nvim
+rm -rf $HOME/.config/nvim
+ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+# tmux
+ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+
+# ghostty
+rm -rf $HOME/.config/ghostty
+ln -s $DOTFILES/ghostty $HOME/.config/ghostty
+
+# starship
+ln -sf $DOTFILES/starship/starship.toml $HOME/.config/starship.toml
