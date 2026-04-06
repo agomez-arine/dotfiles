@@ -90,7 +90,7 @@ Leader: `Space`
 **Basics:**
 
 - Save
-  - `Ctrl+s` or `:w`
+  - `Ctrl+s`, `:w`, or `<leader>w`
 - Close window/quit
   - `:q`
 - Close buffer
@@ -99,6 +99,10 @@ Leader: `Space`
   - `:q!`
 - Save and quit
   - `:wq`
+- Undo (normal mode)
+  - `u`
+- Redo (normal mode)
+  - `Ctrl+r`
 
 **Movement:**
 
@@ -152,6 +156,23 @@ Leader: `Space`
 - Diffview file history
   - `<leader>gh`
 
+**Diff Mode:**
+
+- Open file diff (from command line)
+  - `nvim -d file1 file2`
+- Open diff split (in nvim)
+  - `:vert diffsplit file2`
+- Next/prev change
+  - `]c` / `[c`
+- Pull change from other file
+  - `do`
+- Push change to other file
+  - `dp`
+- Refresh diff after edits
+  - `:diffupdate`
+- Exit diff mode
+  - `:diffoff!`
+
 **Tools:**
 
 - Toggle Undotree
@@ -179,6 +200,12 @@ Leader: `Space`
   - `<leader>/`
 - File explorer (neo-tree)
   - `<leader>e`
+- Add file/folder (in explorer)
+  - `a` (use trailing `/` for folder)
+- Rename (in explorer)
+  - `r`
+- Delete (in explorer)
+  - `d`
 - Buffer picker (list open files)
   - `<leader>,`
 - Switch to last buffer

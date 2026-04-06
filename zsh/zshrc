@@ -214,5 +214,17 @@ uuid() {
   echo "$id"
 }
 
+
+alias gst='git status'
+
+# git stash --include-untracked
+alias gsu='git stash -u'
+
+alias gdf='git diff --staged'
+
+
 # Source local/machine-specific config (not in dotfiles repo)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# Added by arine-server/bin/setup
+eval "$(direnv hook zsh)"
