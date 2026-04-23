@@ -81,6 +81,28 @@ tmux a -t name        # Attach to session
 tmux kill-session -t name
 ```
 
+**Session Switching (while inside tmux):**
+
+- Interactive session list
+  - `Ctrl+Space s` — use arrow keys to select, Enter to switch
+
+**Killing Sessions:**
+
+```bash
+tmux kill-session -t name   # Kill specific session
+tmux kill-session -a        # Kill all sessions EXCEPT current
+tmux kill-server            # Kill ALL sessions (nuclear option)
+```
+
+**Renaming Sessions:**
+
+- Keyboard shortcut (fastest)
+  - `Ctrl+Space $` — edit name in status bar, press Enter
+- Command line (inside the session)
+  - `tmux rename-session new-name`
+- Command line (for a different session)
+  - `tmux rename-session -t old-name new-name`
+
 ---
 
 ### Neovim (LazyVim)
@@ -99,10 +121,14 @@ Leader: `Space`
   - `:q!`
 - Save and quit
   - `:wq`
+- Reload file (discard unsaved changes)
+  - `:e!`
 - Undo (normal mode)
   - `u`
 - Redo (normal mode)
   - `Ctrl+r`
+- Toggle word wrap
+  - `<leader>uw`
 
 **Movement:**
 
@@ -110,6 +136,14 @@ Leader: `Space`
   - `$`
 - Beginning of line
   - `0`
+- Top of file
+  - `gg`
+- Bottom of file
+  - `G`
+- Move line up
+  - `Option+k` (Alt+k)
+- Move line down
+  - `Option+j` (Alt+j)
 
 **Selection & Copy:**
 
@@ -125,10 +159,18 @@ Leader: `Space`
   - `yy`
 - Cut line
   - `dd`
+- Delete word
+  - `diw` (inner word) / `daw` (word + space)
 - Paste
   - `p`
 - Scroll down/up (half page)
   - `Ctrl+d` / `Ctrl+u`
+- Toggle comment
+  - `gcc` (line) / `gc` (visual selection)
+- Indent
+  - `>>` (line) / `>` (visual selection)
+- Dedent
+  - `<<` (line) / `<` (visual selection)
 
 **Harpoon (quick file marks):**
 
@@ -155,6 +197,10 @@ Leader: `Space`
   - `<leader>gd`
 - Diffview file history
   - `<leader>gh`
+- Next git hunk (changed section)
+  - `]h`
+- Previous git hunk
+  - `[h`
 
 **Diff Mode:**
 
@@ -224,10 +270,16 @@ Leader: `Space`
   - `<leader>ca`
 - Go to definition
   - `gd`
+- Go to declaration
+  - `gD`
 - Go to references
   - `gr`
+- Go to implementation
+  - `gI`
+- Go to type definition
+  - `gy`
 - Hover documentation
-  - `K`
+  - `K` (press again to enter the popup, then `j`/`k` to scroll)
 - Trouble diagnostics
   - `<leader>xx`
 - Next/prev diagnostic

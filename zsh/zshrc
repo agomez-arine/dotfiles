@@ -222,6 +222,7 @@ alias gsu='git stash -u'
 
 alias gdf='git diff --staged'
 
+alias up='cd ..'
 
 # Source local/machine-specific config (not in dotfiles repo)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
