@@ -45,11 +45,25 @@ In most nvim file explorers (neo-tree, nvim-tree, etc.) there are separate toggl
 | `ggdG` | Delete all contents in file |
 | `:%d` | Delete all contents (Ex command) |
 | `<leader>cr` | Rename symbol (LSP-powered, all references) |
+| `gcc` | Toggle comment on current line |
+| `gc` | Toggle comment on selection (visual mode) |
+| `>>` | Indent current line |
+| `<<` | Dedent current line |
+| `>` | Indent selection (visual mode) |
+| `<` | Dedent selection (visual mode) |
+
+**Tip:** Prefix with a number, e.g., `3>>` indents 3 lines.
 
 ## Search and Replace
 
 | Command | Action |
 |---------|--------|
+| `*` | Search forward for word under cursor |
+| `#` | Search backward for word under cursor |
+| `n` | Jump to next match |
+| `N` | Jump to previous match |
+| `<leader>sw` | Search word under cursor (Telescope, whole project) |
+| `<leader>/` | Open search (Telescope) |
 | `:%s/old/new/g` | Replace all in file |
 | `:%s/old/new/gc` | Replace all with confirmation (y/n each) |
 | `:s/old/new/g` | Replace on current line only |
@@ -102,3 +116,44 @@ Use nvim splits, not tmux panes with separate nvim instances. Splits share the s
 | `{number}G` | Go to line number (e.g., `50G` goes to line 50) |
 | `<C-u>` | Scroll up half page |
 | `<C-d>` | Scroll down half page |
+
+## Visual Mode & Text Objects
+
+Select chunks of code with `v` + text objects. Pattern: `v` + `a`/`i` + object
+
+- `a` = **a**round (includes delimiters)
+- `i` = **i**nside (excludes delimiters)
+
+| Key | Action |
+|-----|--------|
+| `vaf` | Select **a** **f**unction (including decorator/signature) |
+| `vif` | Select **i**nside **f**unction (body only) |
+| `va{` | Select **a**round curly braces `{}` |
+| `vi{` | Select **i**nside curly braces |
+| `va(` | Select **a**round parentheses `()` |
+| `vi(` | Select **i**nside parentheses |
+| `va"` | Select **a**round double quotes |
+| `vi"` | Select **i**nside double quotes |
+| `vap` | Select **a** **p**aragraph |
+| `vip` | Select **i**nside **p**aragraph |
+| `vat` | Select **a**round HTML/XML tag |
+| `vit` | Select **i**nside HTML/XML tag |
+
+### Incremental selection (LazyVim/Treesitter)
+
+- `<CR>` in visual mode - expand selection to larger syntax node
+- `<BS>` in visual mode - shrink selection back
+
+## Yank (Copy) and Paste
+
+| Key | Action |
+|-----|--------|
+| `y` | Yank (copy) selection |
+| `yy` | Yank entire line |
+| `p` | Paste after cursor (or replace selection in visual mode) |
+| `P` | Paste before cursor |
+| `"0p` | Paste from yank register (ignores deleted text) |
+| `"+p` | Paste from system clipboard |
+| `"+y` | Yank to system clipboard |
+
+**Tip:** When you replace text with `p` in visual mode, the replaced text overwrites your register. Use `"0p` to paste the same yanked text multiple times.
