@@ -20,12 +20,22 @@ How to read vim keybindings:
 
 **Sequences:** `<C-w>v` means Ctrl+w, release, then v (not all at once).
 
-## File Explorer Toggles
+## File Explorer (snacks.nvim)
 
-In most nvim file explorers (neo-tree, nvim-tree, etc.) there are separate toggles:
+This config shows dotfiles and gitignored files by default. Use these toggles to hide/show them:
 
-- `H` — hidden files (dot-prefixed like `.git`, `.env`)
-- `I` — gitignored files
+| Key | Action |
+|-----|--------|
+| `H` | Toggle hidden/dotfiles (`.git`, `.env`, etc.) |
+| `I` | Toggle gitignored files |
+| `<leader>e` | Toggle file explorer |
+| `<leader>E` | Open file explorer at cwd |
+| `l` or `<CR>` | Open file / toggle directory |
+| `h` | Close directory |
+| `<BS>` | Go up one directory |
+| `a` | Add new file/directory |
+| `d` | Delete file |
+| `r` | Rename file |
 
 ## LSP Keybindings
 
